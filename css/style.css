@@ -554,9 +554,17 @@ header .container nav ul li a span {
 #portfolio .content .box {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(500px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  -ms-grid-columns: (minmax(calc(50% - 30px), 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(calc(50% - 30px), 1fr));
   gap: 30px;
+}
+
+@media (max-width: 767px) {
+  #portfolio .content .box {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    gap: 0 !important;
+  }
 }
 
 #portfolio .content .box > div {
