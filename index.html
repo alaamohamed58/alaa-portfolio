@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--style sheet-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--Normalize-->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!--google font-->
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!--font awesome script-->
+    <script src="js/all.min.js"></script>
+    <!--main js-->
+    <script src="js/main.js" defer></script>
+    <title>Alaa -- Portfolio</title>
+  </head>
+  <body>
+    <button id="scroll"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="navBtn"><i class="fa-solid fa-bars"></i></button>
+    <!--header-->
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li class="active">
+              <a href="#landing">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span></a
+              >
+            </li>
+            <li>
+              <a href="#skills">
+                <i class="fa-solid fa-paintbrush"></i>
+                <span>skills</span></a
+              >
+            </li>
+            <li>
+              <a href="#about">
+                <i class="fa-solid fa-user"></i>
+                <span>About</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#portfolio">
+                <i class="fa-solid fa-address-card"></i>
+
+                <span>Portfolio </span></a
+              >
+            </li>
+            <li>
+              <a href="#services">
+                <i class="fa-solid fa-hard-drive"></i>
+                <span>Services</span></a
+              >
+            </li>
+            <li>
+              <a href="#contact"
+                ><i class="fa-solid fa-message"></i> <span>Contact</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--landing-->
+
+    <section id="landing">
+      <div class="content">
+        <h1>
+          I'm Alaa Mohamed.
+
+          <div>
+            <span
+              class="txt-type"
+              data-wait="1000"
+              data-words='["Front-end web developer", "React JS Developer"]'
+            ></span>
+          </div>
+        </h1>
+
+        <div class="social">
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=100008391227746"
+                target="_blank"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/mr.compiler99/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/+201027497672" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://telegram.me/tarmanau" target="_blank">
+                <i class="fa-brands fa-telegram"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/alaa-mohamed-245804206"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--skills-->
+    <section id="skills">
+      <div class="container">
+        <div class="main-title">
+          <h2>skills</h2>
+          <p>My skills in front-end Development</p>
+        </div>
+        <div class="content">
+          <div class="box"></div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <!--about-->
+
+      <section id="about">
+        <div class="container">
+          <div class="main-title">
+            <h2>about</h2>
+            <p>
+              I am a Frontend Web Developer working with React JS with knowledge
+              in fetching API , sending HTTP request and handling HTTP Errors
+            </p>
+          </div>
+          <div class="content">
+            <div class="box">
+              <div class="pic">
+                <img
+                  src="imgs/WhatsApp Image 2022-06-29 at 11.13.37 AM.jpeg"
+                  alt="my photo"
+                />
+              </div>
+              <div class="c">
+                <h3>Front-end Web Developer - React JS</h3>
+                <div class="inform">
+                  <div class="col one">
+                    <div>
+                      <strong>birthday:</strong> <span>8 June, 1999 </span>
+                    </div>
+                    <div>
+                      <strong>phone:</strong> <span>+201123987007 </span>
+                    </div>
+                    <div><strong>city:</strong> <span>Cairo, Egypt </span></div>
+                    <div><strong>Age:</strong> <span>23 </span></div>
+                  </div>
+                  <div class="col two">
+                    <div><strong>Degree:</strong> <span>Bachelor </span></div>
+                    <div>
+                      <strong>Email:</strong>
+                      <span style="text-transform: none"
+                        >Alaamohamed58999@gmail.com
+                      </span>
+                    </div>
+                    <div>
+                      <strong>freelance:</strong> <span>available </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--portfolio-->
+      <section id="portfolio">
+        <div class="container">
+          <div class="main-title">
+            <h2>portfolio</h2>
+            <p>this is some of my prominent projects built from scratch</p>
+          </div>
+          <div class="content">
+            <ul>
+              <li class="active" data-portfolio=".all">All</li>
+              <li data-portfolio=".jsCss">Javascript & CSS</li>
+              <li data-portfolio=".reactFirebase">React js & firebase</li>
+            </ul>
+            <div class="box">
+              <div class="all jsCss">
+                <div class="img">
+                  <img src="imgs/Untitled.jpg" alt="restaurant" />
+                </div>
+
+                <button>
+                  <a href="https://alaamohamed58.github.io/restaurant/" target="_blank">
+                    Demo</a
+                  >
+                </button>
+              </div>
+              
+              <div class="all jsCss">
+                <div class="img">
+                  <img src="imgs/portfolio2.jpg" alt="restaurant" />
+                </div>
+
+                <button>
+                  <a href="https://alaamohamed58.github.io/full-template-js/" target="_blank">
+                    View Demo</a
+                  >
+                </button>
+              </div>
+              <div class="all jsCss">
+                <div class="img">
+                  <img src="imgs/houses.jpg" alt="restaurant" />
+                </div>
+  
+                <button>
+                  <a href="https://alaamohamed58.github.io/house/" target="_blank">
+                    View Demo</a
+                  >
+                </button>
+              </div>
+            </div>
+
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!--services-->
+      <section id="services">
+        <div class="container">
+          <div class="main-title">
+            <h2>services</h2>
+            <p>the services services that i may offer</p>
+          </div>
+          <div class="content">
+            <div class="box">
+              <div class="serve">
+                <div class="icon">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="details">
+                  <h3>convert PSD or Figma design into code</h3>
+                  <p>
+                    converting any figma or PSD design into code with modern
+                    technologies
+                  </p>
+                </div>
+              </div>
+              <div class="serve">
+                <div class="icon">
+                  <i class="fa-solid fa-code-pull-request"></i>
+                </div>
+                <h3>working with HTTP requests</h3>
+                <p>
+                  the ability to work with API to send or get request from the
+                  database
+                </p>
+              </div>
+              <div class="serve">
+                <div class="icon">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h3>handling HTTP Errors</h3>
+                <p>Handling HTTP errors in the client side</p>
+              </div>
+              <div class="serve">
+                <div class="icon">
+                  <i class="fa-solid fa-flask"></i>
+                </div>
+                <h3>testing react app</h3>
+                <p>testing react applications and enhanicng performance</p>
+              </div>
+              <div class="serve">
+                <div class="icon">
+                  <i class="fa-solid fa-database"></i>
+                </div>
+                <h3>Authentication with firebase</h3>
+                <p>website authentication using firebase and React</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--contact-->
+      <section id="contact">
+        <div class="container">
+          <div class="main-title">
+            <h2>contact</h2>
+            <p>for any details or information you contact me</p>
+          </div>
+          <div class="content">
+            <div class="box">
+              <div class="accounts">
+                <div class="email">
+                  <div class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4>E-mail</h4>
+                    <a href="mailto:alaamohamed2422@gmail.com"
+                      >alaamohamed2422@gmail.com</a
+                    >
+                  </div>
+                </div>
+                <div class="phone">
+                  <div class="icon">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div>
+                    <h4>Call</h4>
+                    <a href="tel:+201123987007">+201123987007</a>
+                  </div>
+                </div>
+              </div>
+              <div class="form">
+                <form action="#">
+                  <div class="name">
+                    <label for="name">your name</label>
+                    <input type="text" id="name" />
+                  </div>
+                  <div class="your email">
+                    <label for="email">your E-mail</label>
+                    <input type="mail" id="email" />
+                  </div>
+                  <div class="message">
+                    <label for="message">message</label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </div>
+                  <button type="submit">send message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

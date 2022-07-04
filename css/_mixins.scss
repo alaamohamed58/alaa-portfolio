@@ -1,0 +1,37 @@
+@mixin borderRadius($dimensions) {
+  width: $dimensions;
+  height: $dimensions;
+  border-radius: 50%;
+}
+@mixin centering() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin breakPoints($point) {
+  @if $point == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == smallScreen {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == mediumScreen {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == largeScreen {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point == tab {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == verysmall {
+    @media (min-width: 300px) and (max-width: 991px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import "./_global-variables";
+@import "./_mixins";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  width: 100%;
+}
+/*small screens*/
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+/*medium screens*/
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+/*large screens */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/*x-large screens*/
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+/* extra large screens*/
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1426px;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+#navBtn {
+  right: 30px;
+  top: 30px;
+  display: none;
+  @include breakPoints(tab) {
+    display: block;
+  }
+}
+#scroll {
+  right: 30px;
+  bottom: 30px;
+  opacity: 0;
+}
+#scroll,
+#navBtn {
+  transition: 0.6s;
+  position: fixed;
+
+  border: none;
+  z-index: 1111;
+  background: $blue;
+  @include borderRadius(40px);
+  color: #fff;
+  cursor: pointer;
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  padding: 30px 0;
+}
+.content:not(#landing .content) {
+  margin-top: 30px;
+  transform: translateY(300px);
+  opacity: 0;
+  transition: 3s;
+
+  &.active {
+    transform: translateY(0px) !important;
+    opacity: 1 !important;
+  }
+}
+.main-title {
+  text-align: center;
+}
+.main-title h2 {
+  text-transform: uppercase;
+  color: $title-color;
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  margin: {
+    bottom: 20px;
+    right: auto;
+    left: auto;
+  }
+}
+.main-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: $blue;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-title p {
+  font-size: 18px;
+}
