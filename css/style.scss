@@ -250,17 +250,21 @@ header {
     .box {
       display: flex;
       justify-content: center;
-
       gap: 50px;
       flex-wrap: wrap;
       @include breakPoints(mobile) {
         gap: 20px !important;
       }
+      img {
+        width: 30%;
+      }
       div {
         width: fit-content;
         text-align: center;
+        flex-basis: 25%;
+
         @include breakPoints(mobile) {
-          width: 100%;
+          flex-basis: 100%;
         }
 
         &:nth-child(1) {

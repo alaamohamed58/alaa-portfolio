@@ -471,16 +471,23 @@ header .container nav ul li a span {
   }
 }
 
+#skills .content .box img {
+  width: 30%;
+}
+
 #skills .content .box div {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
 }
 
 @media (max-width: 767px) {
   #skills .content .box div {
-    width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 

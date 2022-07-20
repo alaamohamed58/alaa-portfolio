@@ -55,6 +55,22 @@ const skillTitle = [
 ];
 const skillsSection = document.querySelector("#skills .box");
 
+let img = document.createElement("img"),
+  divContent = document.createElement("div");
+divContent.className = "skill-content";
+divContent.appendChild(img);
+img.src = `imgs/skills/nextjs.svg`;
+divContent.style.cssText = `
+display: flex;
+align-items: center;
+gap: 15px;
+
+`;
+document.addEventListener("DOMContentLoaded", function () {
+  console.log(skillsSection.children[4]);
+  skillsSection.children[3].after(divContent);
+});
+
 for (let i = 0; i < skillTitle.length; i++) {
   let div = document.createElement("div"),
     spanIcon = document.createElement("span"),
@@ -80,7 +96,6 @@ let filterBtn = Array.from(
     document.querySelectorAll("#portfolio .content ul li")
   ),
   portfolioImgs = document.querySelectorAll("#portfolio .content .box > div");
-console.log(portfolioImgs);
 filterBtn.forEach((btn) => {
   btn.addEventListener("click", portfolioActiveClasses);
   btn.addEventListener("click", hideAllImgs);
