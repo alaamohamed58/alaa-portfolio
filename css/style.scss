@@ -484,6 +484,18 @@ header {
         }
         .form {
           flex-basis: 50%;
+          overflow: hidden;
+          position: relative;
+          &.invalid {
+            input,
+            textarea {
+              border-color: red;
+            }
+            button {
+              background-color: rgba(255, 0, 0, 0.486);
+              cursor: not-allowed;
+            }
+          }
 
           form {
             display: flex;
@@ -527,8 +539,34 @@ header {
             transition: 0.4s;
             border-radius: 4px;
           }
+          #success {
+            padding: 10px;
+            background-color: #e7faf1;
+            text-align: center;
+
+            border: 2px solid #3dd187;
+            color: #26c475;
+            display: none;
+            position: absolute;
+            transform: scale(1) translateX(-50%);
+            left: 50%;
+            bottom: 5px;
+            animation: success 0.5s;
+            &.show {
+              display: block;
+            }
+          }
         }
       }
     }
+  }
+}
+
+@keyframes success {
+  from {
+    transform: scale(0) translateX(-50%);
+  }
+  to {
+    transform: scale(1) translateX(-50%);
   }
 }

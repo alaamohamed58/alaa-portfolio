@@ -109,11 +109,11 @@ section {
 
 .content:not(#landing .content) {
   margin-top: 30px;
-  -webkit-transform: translateY(300px);
-          transform: translateY(300px);
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
   opacity: 0;
-  -webkit-transition: 3s;
-  transition: 3s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .content.active {
@@ -765,6 +765,18 @@ header .container nav ul li a span {
 #contact .container .content .box .form {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+#contact .container .content .box .form.invalid input,
+#contact .container .content .box .form.invalid textarea {
+  border-color: red;
+}
+
+#contact .container .content .box .form.invalid button {
+  background-color: rgba(255, 0, 0, 0.486);
+  cursor: not-allowed;
 }
 
 #contact .container .content .box .form form {
@@ -822,5 +834,47 @@ header .container nav ul li a span {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 4px;
+}
+
+#contact .container .content .box .form #success {
+  padding: 10px;
+  background-color: #e7faf1;
+  text-align: center;
+  border: 2px solid #3dd187;
+  color: #26c475;
+  display: none;
+  position: absolute;
+  -webkit-transform: scale(1) translateX(-50%);
+          transform: scale(1) translateX(-50%);
+  left: 50%;
+  bottom: 5px;
+  -webkit-animation: success 0.5s;
+          animation: success 0.5s;
+}
+
+#contact .container .content .box .form #success.show {
+  display: block;
+}
+
+@-webkit-keyframes success {
+  from {
+    -webkit-transform: scale(0) translateX(-50%);
+            transform: scale(0) translateX(-50%);
+  }
+  to {
+    -webkit-transform: scale(1) translateX(-50%);
+            transform: scale(1) translateX(-50%);
+  }
+}
+
+@keyframes success {
+  from {
+    -webkit-transform: scale(0) translateX(-50%);
+            transform: scale(0) translateX(-50%);
+  }
+  to {
+    -webkit-transform: scale(1) translateX(-50%);
+            transform: scale(1) translateX(-50%);
+  }
 }
 /*# sourceMappingURL=style.css.map */

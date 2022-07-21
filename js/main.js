@@ -224,3 +224,55 @@ function init() {
   //init typeWriter
   new TypeWriter(txtElement, words, wait);
 }
+
+function sendMail() {
+  let name = document.getElementById("name").value,
+    email = document.getElementById("email_id").value,
+    message = document.getElementById("message").value;
+  if (name === "" || email === "" || message === "") {
+    document.querySelector(".form").classList.add("invalid");
+    document.querySelector(".form button").textContent = "Invalid Input";
+    return;
+  } else {
+  }
+  const params = {
+    from_name: name,
+    email_id: email,
+    message: message,
+  };
+  emailjs
+    .send("service_2nthapo", "template_so2ue8d", params)
+    .then(function (res) {
+      document.getElementById("success").classList.add("show");
+      document.forms[0].reset();
+    });
+}
+
+document.forms[0].onsubmit = function (e) {
+  e.preventDefault();
+};
+
+document.querySelectorAll(".form input").forEach((input) => {
+  input.addEventListener("input", () => {
+    if (input.value !== "") {
+      document.querySelector(".form").classList.remove("invalid");
+      document.querySelector(".form button").textContent = "Send Message";
+    }
+  });
+});
+document.querySelector("textarea").oninput = () => {
+  if (document.querySelector("textarea").value !== "") {
+    document.querySelector(".form").classList.remove("invalid");
+    document.querySelector(".form button").textContent = "Send Message";
+  }
+};
+// function validaty() {
+//   let name = document.getElementById("name").value,
+//     email = document.getElementById("email_id").value,
+//     message = document.getElementById("message").value;
+
+//   if (name !== "" && email !== "" && message !== "") {
+//     document.querySelector(".form").classList.remove("invalid");
+//     document.querySelector(".form button").textContent = "Send Message";
+//   }
+// }

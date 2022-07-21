@@ -19,6 +19,26 @@
     <script src="js/all.min.js"></script>
     <!--main js-->
     <script src="js/main.js" defer></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('amwzrqJgjrEPhX1k2');
+        })();
+    </script>
+    <script type="text/javascript">
+
+    </script>
+
+
+
+
+
+
+
+
     <title>Alaa -- Portfolio</title>
   </head>
   <body>
@@ -350,14 +370,14 @@
                 </div>
               </div>
               <div class="form">
-                <form action="#">
+                <form action="#" id="form">
                   <div class="name">
                     <label for="name">your name</label>
                     <input type="text" id="name" />
                   </div>
                   <div class="your email">
                     <label for="email">your E-mail</label>
-                    <input type="mail" id="email" />
+                    <input type="mail" id="email_id" />
                   </div>
                   <div class="message">
                     <label for="message">message</label>
@@ -368,8 +388,12 @@
                       rows="10"
                     ></textarea>
                   </div>
-                  <button type="submit">send message</button>
+                  <button type="submit" onclick="sendMail()" >send message</button>
+                 
                 </form>
+                <div id="success">
+                  <p>Text message has been sent successfully</p>
+                </div>
               </div>
             </div>
           </div>
