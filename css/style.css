@@ -275,14 +275,14 @@ header .container nav ul li a span {
 #landing {
   position: relative;
   min-height: 45vh;
-  background: url("../imgs/react.gif");
+  background: url("../imgs/porrtfolio.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 100% 65%;
 }
 
 #landing::before {
-  content: "";
+  content: " ";
   position: absolute;
   left: 0;
   top: 0;
@@ -290,8 +290,8 @@ header .container nav ul li a span {
   height: 100%;
   z-index: 1;
   background: #080024;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(20, 20, 21, 0.8)));
-  background: linear-gradient(90deg, rgba(20, 20, 21, 0.8));
+  background: -webkit-gradient(linear, left top, right top, from(rgba(20, 20, 21, 0.1)));
+  background: linear-gradient(90deg, rgba(20, 20, 21, 0.1));
 }
 
 #landing .content {

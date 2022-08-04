@@ -105,13 +105,13 @@ header {
 #landing {
   position: relative;
   min-height: 45vh;
-  background: url("../imgs/react.gif");
+  background: url("../imgs/porrtfolio.png");
 
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 100% 65%;
   &::before {
-    content: "";
+    content: " ";
     position: absolute;
     left: 0;
     top: 0;
@@ -121,7 +121,7 @@ header {
     // background: linear-gradient(90deg, rgba(14, 122, 161, 0.9));
     z-index: 1;
     background: rgb(8, 0, 36);
-    background: linear-gradient(90deg, rgba(20, 20, 21, 0.8));
+    background: linear-gradient(90deg, rgba(20, 20, 21, 0.1));
   }
 
   .content {
