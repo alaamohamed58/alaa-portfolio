@@ -250,13 +250,16 @@ header {
     .box {
       display: flex;
       justify-content: center;
-      gap: 50px;
+      gap: 25px;
       flex-wrap: wrap;
       @include breakPoints(mobile) {
         gap: 20px !important;
       }
       img {
-        width: 30%;
+        width: 100%;
+        @include breakPoints(mobile) {
+          width: 40% !important;
+        }
       }
       div {
         width: fit-content;
@@ -264,7 +267,7 @@ header {
         flex-basis: 25%;
 
         @include breakPoints(mobile) {
-          flex-basis: 100%;
+          flex-basis: 100% !important;
         }
 
         &:nth-child(1) {

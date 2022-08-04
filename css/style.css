@@ -460,7 +460,7 @@ header .container nav ul li a span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 50px;
+  gap: 25px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -472,7 +472,13 @@ header .container nav ul li a span {
 }
 
 #skills .content .box img {
-  width: 30%;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  #skills .content .box img {
+    width: 40% !important;
+  }
 }
 
 #skills .content .box div {
@@ -486,8 +492,8 @@ header .container nav ul li a span {
 
 @media (max-width: 767px) {
   #skills .content .box div {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: 100% !important;
+        flex-basis: 100% !important;
   }
 }
 

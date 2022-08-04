@@ -37,57 +37,35 @@ navBtn.addEventListener("click", () => {
 //skills
 
 const mySkills = [
-  `<i class="fa-brands fa-html5"></i>`,
-  `<i class="fa-brands fa-sass"></i>`,
-  `<i class="fa-brands fa-js"></i>`,
-  `<i class="fa-brands fa-react"></i>`,
-  `<i class="fa-brands fa-bootstrap"></i>`,
-  `<i class="fa-brands fa-github"></i>`,
+  `imgs/skills/HTML.svg`,
+  `imgs/skills/scss.svg`,
+  `imgs/skills/javascript.svg`,
+  `imgs/skills/reactjs.svg`,
+  `imgs/skills/nextjs.svg`,
+  `imgs/skills/bootstrap.svg`,
+  `imgs/skills/github.svg`,
 ];
 
-const skillTitle = [
-  "HTML5",
-  "SCSS",
-  "Javascript",
-  "React JS",
-  "Bootsrap",
-  "Github",
-];
 const skillsSection = document.querySelector("#skills .box");
 
-let img = document.createElement("img"),
-  divContent = document.createElement("div");
-divContent.className = "skill-content";
-divContent.appendChild(img);
-img.src = `imgs/skills/nextjs.svg`;
-divContent.style.cssText = `
-display: flex;
-align-items: center;
-gap: 15px;
-
-`;
-document.addEventListener("DOMContentLoaded", function () {
-  console.log(skillsSection.children[4]);
-  skillsSection.children[3].after(divContent);
-});
-
-for (let i = 0; i < skillTitle.length; i++) {
+for (let i = 0; i < mySkills.length; i++) {
   let div = document.createElement("div"),
-    spanIcon = document.createElement("span"),
-    spanText = document.createElement("span");
-  spanIcon.className = "skill";
-  spanIcon.innerHTML = mySkills[i];
+    image = document.createElement("img");
 
-  spanText.textContent = skillTitle[i];
+  image.src = mySkills[i];
 
   div.className = "skill-content";
   div.style.cssText = `
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  padding: 25px;
+  flex-basis :15%;
+  border-radius: 30px;
   `;
-  div.appendChild(spanIcon);
-  div.appendChild(spanText);
+  div.appendChild(image);
+
   skillsSection.appendChild(div);
 }
 
