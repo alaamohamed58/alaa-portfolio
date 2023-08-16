@@ -38,33 +38,50 @@ navBtn.addEventListener("click", () => {
 
 const mySkills = [
   `imgs/skills/HTML.svg`,
+  `imgs/skills/css-3.svg`,
   `imgs/skills/scss.svg`,
+  'imgs/skills/tailwind.svg',
   `imgs/skills/javascript.svg`,
-  `imgs/skills/reactjs.svg`,
+  'imgs/skills/typescript.svg',
+    `imgs/skills/reactjs.svg`,
+  'imgs/skills/nodejs-icon.svg',
+  'imgs/skills/express.svg',
   `imgs/skills/nextjs.svg`,
-  `imgs/skills/bootstrap.svg`,
+  `imgs/skills/pug.svg`,
   `imgs/skills/github.svg`,
+
+
+
 ];
 
 const skillsSection = document.querySelector("#skills .box");
 
 for (let i = 0; i < mySkills.length; i++) {
   let div = document.createElement("div"),
+    skillName = document.createElement("h4"),
     image = document.createElement("img");
 
   image.src = mySkills[i];
+const text = mySkills[i].split("/")[2];
+const wordWithoutExtension = text.match(/^(.*?)\.svg$/)[1];
+skillName.textContent = wordWithoutExtension
+
+
 
   div.className = "skill-content";
   div.style.cssText = `
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
   padding: 25px;
   flex-basis :15%;
   border-radius: 30px;
   `;
+  
   div.appendChild(image);
+  div.appendChild(skillName);
 
   skillsSection.appendChild(div);
 }
@@ -203,6 +220,7 @@ function init() {
   new TypeWriter(txtElement, words, wait);
 }
 
+//send email
 function sendMail() {
   let name = document.getElementById("name").value,
     email = document.getElementById("email_id").value,
@@ -215,14 +233,18 @@ function sendMail() {
   }
   const params = {
     from_name: name,
-    email_id: email,
+    email,
     message: message,
   };
   emailjs
-    .send("service_2nthapo", "template_so2ue8d", params)
+    .send("service_ycc6p68", "template_d30kd1t", params)
     .then(function (res) {
       document.getElementById("success").classList.add("show");
       document.forms[0].reset();
+
+      setTimeout(() => {
+            document.getElementById("success").remove()
+      },3000)
     });
 }
 
