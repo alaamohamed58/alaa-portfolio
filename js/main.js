@@ -208,6 +208,7 @@ TypeWriter.prototype.type = function () {
   setTimeout(() => this.type(), typeSpeed);
 };
 
+console.log(document.querySelector(".form button"))
 // Int on DOM Load
 
 document.addEventListener("DOMContentLoaded", init);
@@ -225,6 +226,8 @@ function sendMail() {
   let name = document.getElementById("name").value,
     email = document.getElementById("email_id").value,
     message = document.getElementById("message").value;
+      document.querySelector(".form button").textContent = "Loading....";
+      document.querySelector(".form button").disabled = true;
   if (name === "" || email === "" || message === "") {
     document.querySelector(".form").classList.add("invalid");
     document.querySelector(".form button").textContent = "Invalid Input";
@@ -241,7 +244,9 @@ function sendMail() {
     .then(function (res) {
       document.getElementById("success").classList.add("show");
       document.forms[0].reset();
-
+  document.querySelector(".form button[type='submit']").style.css = "display: block"
+      document.querySelector(".form button").textContent = "Send Message";
+      document.querySelector(".form button").disabled = false;
       setTimeout(() => {
             document.getElementById("success").remove()
       },3000)
